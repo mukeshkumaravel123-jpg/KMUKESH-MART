@@ -1,0 +1,87 @@
+import java.util.Scanner;
+
+public class ViewCart {
+
+    static Scanner sc = new Scanner(System.in);
+
+    static String[] productName = {
+        "Rice",
+        "Sugar",
+        "Milk",
+        "Biscuits",
+        "Soap",
+        "Shampoo",
+        "Tea",
+        "Coffee"
+    };
+
+    static double[] price = {
+        60.00,
+        45.00,
+        30.00,
+        20.00,
+        40.00,
+        120.00,
+        150.00,
+        180.00
+    };
+
+    static int[] cartQuantity = {
+        2, 0, 1, 0, 3, 0, 1, 0
+    };
+
+    public static void main(String[] args) {
+
+        System.out.println("=================================");
+        System.out.println("          KMUKESH MART");
+        System.out.println("           VIEW CART");
+        System.out.println("=================================");
+
+        boolean empty = true;
+        double total = 0;
+
+        System.out.printf(
+            "%-15s %-10s %-10s%n",
+            "Product",
+            "Quantity",
+            "Amount"
+        );
+
+        System.out.println("---------------------------------");
+
+        for (int i = 0; i < productName.length; i++) {
+
+            if (cartQuantity[i] > 0) {
+
+                empty = false;
+
+                double amount =
+                    price[i] * cartQuantity[i];
+
+                System.out.printf(
+                    "%-15s %-10d ₹%.2f%n",
+                    productName[i],
+                    cartQuantity[i],
+                    amount
+                );
+
+                total += amount;
+            }
+        }
+
+        if (empty) {
+
+            System.out.println("Your cart is empty.");
+
+        } else {
+
+            System.out.println("---------------------------------");
+            System.out.printf(
+                "Total Amount: ₹%.2f%n",
+                total
+            );
+        }
+
+        sc.close();
+    }
+}
