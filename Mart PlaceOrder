@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+public class PlaceOrder {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        double totalAmount = 500.00; // Sample cart total
+
+        System.out.println("=================================");
+        System.out.println("          KMUKESH MART");
+        System.out.println("          PLACE ORDER");
+        System.out.println("=================================");
+
+        System.out.println("Cart Total Amount: $" + totalAmount);
+
+        System.out.println("\nSelect Payment Method:");
+        System.out.println("1. Cash on Delivery");
+        System.out.println("2. UPI");
+        System.out.println("3. Debit/Credit Card");
+
+        System.out.print("Enter your choice: ");
+        int choice = sc.nextInt();
+
+        String paymentMethod;
+
+        switch (choice) {
+
+            case 1:
+                paymentMethod = "Cash on Delivery";
+                break;
+
+            case 2:
+                paymentMethod = "UPI";
+                break;
+
+            case 3:
+                paymentMethod = "Debit/Credit Card";
+                break;
+
+            default:
+                paymentMethod = "Cash on Delivery";
+                System.out.println("Invalid choice! Cash on Delivery selected.");
+        }
+
+        System.out.println("\n=================================");
+        System.out.println("        ORDER CONFIRMED");
+        System.out.println("=================================");
+        System.out.println("Payment Method : " + paymentMethod);
+        System.out.println("Amount Paid    : $" + totalAmount);
+        System.out.println("Order Status   : Placed Successfully");
+        System.out.println("=================================");
+        System.out.println("Thank you for shopping at Naveen Mart!");
+
+        sc.close();
+    }
+}
