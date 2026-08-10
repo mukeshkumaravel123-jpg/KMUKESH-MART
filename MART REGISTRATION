@@ -1,0 +1,12 @@
+import java.util.Scanner;
+public class Register {
+    public static void register(Scanner sc) {
+        System.out.println("\n--- REGISTER ---");
+        System.out.print("Enter Username: ");
+        UserData.username = sc.nextLine();
+        System.out.print("Enter Password: ");
+        UserData.password = sc.nextLine();
+        UserData.registered = true;
+        System.out.println("Registration successful!");
+    }
+}
