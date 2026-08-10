@@ -1,0 +1,43 @@
+import java.util.Scanner;
+public class BrowseProducts {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String[] productName = {"Rice", "Sugar", "Milk", "Biscuits", "Soap", "Shampoo", "Tea", "Coffee"};
+        double[] price = {60.00,45.00,30.00,20.00,40.00,120.00,150.00,180.00};
+        String[] category = {"Grocery","Grocery","Dairy","Snacks","Personal Care","Personal Care","Beverages","Beverages" };
+        while (true) {
+            System.out.println("\n==========================================");
+            System.out.println("              KMUKESH MART");
+            System.out.println("            BROWSE PRODUCTS");
+            System.out.println("==========================================");
+            System.out.printf("%-5s %-15s %-12s %-20s%n","ID", "Product", "Price", "Category");
+            System.out.println("------------------------------------------");
+            for (int i = 0; i < productName.length; i++) {
+                System.out.printf("%-5d %-15s ₹%-11.2f %-20s%n",i + 1,productName[i],price[i],category[i]);
+            }
+            System.out.println("------------------------------------------");
+            System.out.println("0. Exit");
+            System.out.print("\nEnter Product ID to view details: ");
+            int choice = sc.nextInt();
+            if (choice == 0) {
+                System.out.println("\nThank you for visiting Naveen Mart!");
+                break;
+            }
+            if (choice >= 1 && choice <= productName.length) {
+                int index = choice - 1;
+                System.out.println("\n==========================================");
+                System.out.println("           PRODUCT DETAILS");
+                System.out.println("==========================================");
+                System.out.println("Product ID : " + (index + 1));
+                System.out.println("Product    : " + productName[index]);
+                System.out.println("Price      : ₹" + price[index]);
+                System.out.println("Category   : " + category[index]);
+                System.out.println("==========================================");
+            } else {
+                System.out.println("\nInvalid Product ID!");
+                System.out.println("Please enter a valid Product ID.");
+            }
+        }
+        sc.close();
+    }
+}
