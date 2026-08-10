@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Login {
+    public static void login(Scanner sc) {
+        System.out.println("\n--- USER LOGIN ---");
+        if (!UserData.registered) {
+            System.out.println("Please register first!");
+            return;
+        }
+        System.out.print("Enter Username: ");
+        String username = sc.nextLine();
+        System.out.print("Enter Password: ");
+        String password = sc.nextLine();
+        if (username.equals(UserData.username) &&
+            password.equals(UserData.password)) {
+            System.out.println("Login successful!");
+            System.out.println("Welcome to KMUESKMART, " + username + "!");
+        } else {
+            System.out.println("Invalid username or password!");
+        }
+    }
+}
