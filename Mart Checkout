@@ -1,0 +1,73 @@
+import java.util.Scanner;
+
+public class Checkout {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("=================================");
+        System.out.println("         KMUKESH MART");
+        System.out.println("           CHECKOUT");
+        System.out.println("=================================");
+
+        System.out.print("Enter Customer Name: ");
+        String name = sc.nextLine();
+
+        System.out.print("Enter Delivery Address: ");
+        String address = sc.nextLine();
+
+        System.out.print("Enter Mobile Number: ");
+        String mobile = sc.nextLine();
+
+        System.out.print("Enter Total Amount: ₹");
+        double totalAmount = sc.nextDouble();
+
+        System.out.println("\n--------- PAYMENT METHOD ---------");
+        System.out.println("1. Cash on Delivery");
+        System.out.println("2. UPI");
+        System.out.println("3. Card");
+
+        System.out.print("Select Payment Method: ");
+        int choice = sc.nextInt();
+
+        String paymentMethod;
+
+        switch (choice) {
+
+            case 1:
+                paymentMethod = "Cash on Delivery";
+                break;
+
+            case 2:
+                paymentMethod = "UPI";
+                break;
+
+            case 3:
+                paymentMethod = "Card";
+                break;
+
+            default:
+                System.out.println("Invalid payment method!");
+                sc.close();
+                return;
+        }
+
+        System.out.println("\n=================================");
+        System.out.println("        ORDER CONFIRMED");
+        System.out.println("=================================");
+
+        System.out.println("Customer Name : " + name);
+        System.out.println("Address       : " + address);
+        System.out.println("Mobile Number : " + mobile);
+        System.out.println("Payment       : " + paymentMethod);
+        System.out.println("Total Amount  : ₹" + totalAmount);
+
+        System.out.println("---------------------------------");
+        System.out.println("Checkout Successful!");
+        System.out.println("Thank you for shopping at Naveen Mart!");
+        System.out.println("=================================");
+
+        sc.close();
+    }
+}
