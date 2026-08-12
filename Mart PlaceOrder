@@ -51,7 +51,7 @@ public class PlaceOrder {
         System.out.println("Amount Paid    : $" + totalAmount);
         System.out.println("Order Status   : Placed Successfully");
         System.out.println("=================================");
-        System.out.println("Thank you for shopping at Naveen Mart!");
+        System.out.println("Thank you for shopping at kmukesh Mart!");
 
         sc.close();
     }
