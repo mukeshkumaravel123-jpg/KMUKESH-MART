@@ -1,10 +1,10 @@
 import java.util.Scanner;
-public class KMUESKMART {
+public class KMUKESHMART {
     static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         int choice;
         do {
-            System.out.println("\n===== KMUESKMART =====");
+            System.out.println("\n===== KMUKESHMART =====");
             System.out.println("1. Register");
             System.out.println("2. Login");
             System.out.println("3. Admin Login");
@@ -23,7 +23,7 @@ public class KMUESKMART {
                     AdminLogin.login(sc);
                     break;
                 case 4:
-                    System.out.println("Thank you for visiting KMUESKMART!");
+                    System.out.println("Thank you for visiting KMUKESHMART!");
                     break;
                 default:
                     System.out.println("Invalid choice!");
