@@ -65,7 +65,7 @@ public class Checkout {
 
         System.out.println("---------------------------------");
         System.out.println("Checkout Successful!");
-        System.out.println("Thank you for shopping at Naveen Mart!");
+        System.out.println("Thank you for shopping at kmukesh Mart!");
         System.out.println("=================================");
 
         sc.close();
