@@ -20,7 +20,7 @@ public class BrowseProducts {
             System.out.print("\nEnter Product ID to view details: ");
             int choice = sc.nextInt();
             if (choice == 0) {
-                System.out.println("\nThank you for visiting Naveen Mart!");
+                System.out.println("\nThank you for visiting kmukesh Mart!");
                 break;
             }
             if (choice >= 1 && choice <= productName.length) {
